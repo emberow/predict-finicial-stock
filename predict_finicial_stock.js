@@ -106,7 +106,7 @@ app.get('/predict-finicial-stock',async function(req, res){
     let epsData = await getEPS(stockNum);
     let dividendData = await getDividend(stockNum);
     let currentPrice = await getCurrentPrice(stockNum);
-    res.send({"stockName": stockName, "eps": epsData, "currentPrice": currentPrice, "dividend": dividendData});
+    res.send({"stockName": stockName, "currentPrice": currentPrice, "eps": epsData, "dividend": dividendData});
 });   
 
 // check running enviroment
